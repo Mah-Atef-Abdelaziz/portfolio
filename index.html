@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahmoud Atef | AI & Software Engineer Portfolio</title>
+    <meta name="description" content="Official portfolio of Mahmoud Atef, AI & Software Engineer specializing in Machine Learning, Cloud Architecture on Azure, Multi-Agent RAG, and production systems." />
+    <meta name="keywords" content="Mahmoud Atef, Mahmoud Atef Abdelaziz, AI Engineer, Machine Learning Developer, Cloud Architect, Microsoft Azure, LangChain, RAG, ACPC Finalist, Digilians, Flutter" />
+    <meta name="author" content="Mahmoud Atef" />
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Mahmoud Atef | AI & Software Engineer Portfolio" />
+    <meta property="og:description" content="AI & Software Engineer shipping machine learning models, cloud infrastructure on Azure, and production-ready applications. ACPC Finalist & Digilians Pioneer." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mah-atef-abdelaziz.github.io/portfolio-website/" />
+    <meta property="og:image" content="/assets/mahmoud_atef.jpg" />
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mahmoud Atef | AI & Software Engineer Portfolio" />
+    <meta name="twitter:description" content="AI & Software Engineer shipping machine learning models, cloud infrastructure on Azure, and production-ready applications." />
+    <meta name="twitter:image" content="/assets/mahmoud_atef.jpg" />
+    <!-- Prevent Flash of Wrong Theme Script -->
+    <script>
+      (function() {
+        try {
+          const savedTheme = localStorage.getItem('theme');
+          const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-[#fcfaff] dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased selection:bg-rose-200 selection:text-rose-900 transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
