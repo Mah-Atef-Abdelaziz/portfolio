@@ -51,8 +51,8 @@ const ProjectsSection = () => {
                 onClick={() => setActiveFilter(filter.value)}
                 className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
                   isActive
-                    ? 'bg-rose-500 text-white shadow-md shadow-rose-500/25 scale-105'
-                    : 'bg-white/80 dark:bg-slate-900/80 text-slate-600 dark:text-slate-300 border border-rose-100 dark:border-slate-800 hover:border-rose-300 dark:hover:border-slate-700 hover:text-rose-600 dark:hover:text-rose-400'
+                    ? 'bg-amber-500 text-white shadow-md shadow-amber-500/25 scale-105'
+                    : 'bg-white/80 dark:bg-slate-900/80 text-slate-600 dark:text-slate-300 border border-amber-100 dark:border-slate-800 hover:border-amber-300 dark:hover:border-slate-700 hover:text-amber-600 dark:hover:text-amber-400'
                 }`}
               >
                 <span>{filter.label}</span>
@@ -81,7 +81,7 @@ const ProjectsSection = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3, delay: idx * 0.05 }}
-                className="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col justify-between group border border-rose-100/80 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md"
+                className="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col justify-between group border border-amber-100/80 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md"
               >
               <div>
                 {/* Compact Image Header */}
@@ -101,14 +101,14 @@ const ProjectsSection = () => {
                     <span
                       className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold backdrop-blur-md shadow-xs ${
                         project.isTeamProject
-                          ? 'bg-rose-950/80 text-rose-100 border border-rose-400/30'
+                          ? 'bg-amber-950/80 text-amber-100 border border-amber-400/30'
                           : 'bg-slate-950/80 text-slate-100 border border-slate-700/40'
                       }`}
                     >
                       {project.isTeamProject ? (
-                        <Users className="w-3 h-3 text-rose-300" />
+                        <Users className="w-3 h-3 text-amber-300" />
                       ) : (
-                        <User className="w-3 h-3 text-purple-300" />
+                        <User className="w-3 h-3 text-amber-300" />
                       )}
                       {project.isTeamProject ? 'Team Project' : 'Solo Project'}
                     </span>
@@ -123,7 +123,7 @@ const ProjectsSection = () => {
 
                 {/* Card Content Body */}
                 <div className="p-5 sm:p-6">
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors line-clamp-1">
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors line-clamp-1">
                     {project.title}
                   </h3>
 
@@ -132,8 +132,8 @@ const ProjectsSection = () => {
                   </p>
 
                   {/* Compact My Role */}
-                  <div className="mb-4 p-2.5 rounded-xl bg-rose-50/70 dark:bg-slate-800/60 border border-rose-100/70 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-300">
-                    <span className="text-[11px] uppercase tracking-wider font-bold text-rose-600 dark:text-rose-400 block mb-0.5">
+                  <div className="mb-4 p-2.5 rounded-xl bg-amber-50/70 dark:bg-slate-800/60 border border-amber-100/70 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-300">
+                    <span className="text-[11px] uppercase tracking-wider font-bold text-amber-600 dark:text-amber-400 block mb-0.5">
                       My Role
                     </span>
                     <span className="line-clamp-2">{project.contribution}</span>
@@ -160,7 +160,7 @@ const ProjectsSection = () => {
                     href={project.liveDemoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900 dark:bg-rose-600 text-white font-semibold text-xs hover:bg-rose-600 dark:hover:bg-rose-500 transition-all shadow-xs"
+                    className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900 dark:bg-amber-600 text-white font-semibold text-xs hover:bg-amber-600 dark:hover:bg-amber-500 transition-all shadow-xs"
                   >
                     View Project
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -172,7 +172,7 @@ const ProjectsSection = () => {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 font-semibold text-xs border border-slate-200 dark:border-slate-700 hover:border-rose-300 hover:text-rose-600 dark:hover:text-rose-400 transition-all"
+                    className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 font-semibold text-xs border border-slate-200 dark:border-slate-700 hover:border-amber-300 hover:text-amber-600 dark:hover:text-amber-400 transition-all"
                   >
                     <GithubIcon className="w-3.5 h-3.5" />
                     GitHub

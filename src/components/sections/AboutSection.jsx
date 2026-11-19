@@ -41,7 +41,7 @@ const AboutSection = () => {
             <div>
 
               <div className="flex items-center gap-3 mb-5">
-                <div className="p-2.5 rounded-xl bg-rose-100/80 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400">
+                <div className="p-2.5 rounded-xl bg-amber-100/80 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400">
                   <UserCheck className="w-5 h-5" />
                 </div>
 
@@ -50,7 +50,7 @@ const AboutSection = () => {
                     Professional Summary
                   </h3>
 
-                  <p className="text-[11px] text-rose-500 dark:text-rose-400 font-semibold uppercase tracking-wider">
+                  <p className="text-[11px] text-amber-600 dark:text-amber-400 font-semibold uppercase tracking-wider">
                     {personalInfo.title}
                   </p>
                 </div>
@@ -64,14 +64,14 @@ const AboutSection = () => {
             </div>
 
             {/* Quick Info */}
-            <div className="mt-6 pt-4 border-t border-rose-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs font-semibold text-slate-500 dark:text-slate-400">
+            <div className="mt-6 pt-4 border-t border-amber-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs font-semibold text-slate-500 dark:text-slate-400">
 
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
                 {personalInfo.location}
               </span>
 
-              <span className="text-rose-600 dark:text-rose-400 font-bold">
+              <span className="text-amber-600 dark:text-amber-400 font-bold">
                 Available for Roles & Collaborations
               </span>
 
@@ -96,7 +96,7 @@ const AboutSection = () => {
                   className="glass-card glass-card-hover rounded-2xl p-5 flex flex-col justify-between min-h-[150px]"
                 >
 
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-rose-100 to-purple-100 dark:from-slate-800 dark:to-slate-800 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-100 to-yellow-100 dark:from-slate-800 dark:to-slate-800 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-3">
                     <IconComponent className="w-5 h-5" />
                   </div>
 

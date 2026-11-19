@@ -6,6 +6,7 @@ import HeroSection from './components/sections/HeroSection';
 import AboutSection from './components/sections/AboutSection';
 import SkillsSection from './components/sections/SkillsSection';
 import ProjectsSection from './components/sections/ProjectsSection';
+import PortfolioVideoSection from './components/sections/PortfolioVideoSection';
 import ExperienceSection from './components/sections/ExperienceSection';
 import EducationSection from './components/sections/EducationSection';
 import CertificatesSection from './components/sections/CertificatesSection';
@@ -14,7 +15,7 @@ import ContactSection from './components/sections/ContactSection';
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen font-sans selection:bg-rose-200 selection:text-rose-900 dark:selection:bg-rose-900 dark:selection:text-rose-100 text-slate-800 dark:text-slate-100 bg-[#fcfaff] dark:bg-slate-950 transition-colors duration-300">
+      <div className="min-h-screen font-sans selection:bg-amber-200 selection:text-amber-900 dark:selection:bg-amber-900 dark:selection:text-amber-100 text-slate-800 dark:text-slate-100 bg-[#fffdf7] dark:bg-slate-950 transition-colors duration-300">
         {/* Sticky Navigation Bar */}
         <Navbar />
 
@@ -24,6 +25,7 @@ function App() {
           <AboutSection />
           <SkillsSection />
           <ProjectsSection />
+          <PortfolioVideoSection />
           <ExperienceSection />
           <EducationSection />
           <CertificatesSection />

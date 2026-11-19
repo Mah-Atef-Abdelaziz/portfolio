@@ -90,9 +90,9 @@ ${formData.message}`;
               {/* Email */}
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="flex items-center gap-3 p-3 rounded-xl bg-white/70 dark:bg-slate-900/70 border border-rose-100 dark:border-slate-800 hover:border-rose-300 dark:hover:border-rose-800 hover:bg-rose-50/60 dark:hover:bg-slate-800 transition-all group"
+                className="flex items-center gap-3 p-3 rounded-xl bg-white/70 dark:bg-slate-900/70 border border-amber-100 dark:border-slate-800 hover:border-amber-300 dark:hover:border-amber-800 hover:bg-amber-50/60 dark:hover:bg-slate-800 transition-all group"
               >
-                <div className="w-10 h-10 rounded-xl bg-rose-100 dark:bg-rose-950/80 text-rose-600 dark:text-rose-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <div className="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-950/80 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                   <Mail className="w-4.5 h-4.5" />
                 </div>
 
@@ -100,7 +100,7 @@ ${formData.message}`;
                   <p className="text-[11px] font-semibold text-slate-400 dark:text-slate-500">
                     Email
                   </p>
-                  <p className="text-sm font-bold text-slate-800 dark:text-slate-200 truncate group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
+                  <p className="text-sm font-bold text-slate-800 dark:text-slate-200 truncate group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
                     {personalInfo.email}
                   </p>
                 </div>
@@ -109,9 +109,9 @@ ${formData.message}`;
               {/* Phone */}
               <a
                 href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`}
-                className="flex items-center gap-3 p-3 rounded-xl bg-white/70 dark:bg-slate-900/70 border border-rose-100 dark:border-slate-800 hover:border-rose-300 dark:hover:border-rose-800 hover:bg-rose-50/60 dark:hover:bg-slate-800 transition-all group"
+                className="flex items-center gap-3 p-3 rounded-xl bg-white/70 dark:bg-slate-900/70 border border-amber-100 dark:border-slate-800 hover:border-amber-300 dark:hover:border-amber-800 hover:bg-amber-50/60 dark:hover:bg-slate-800 transition-all group"
               >
-                <div className="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-950/80 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/80 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                   <Phone className="w-4.5 h-4.5" />
                 </div>
 
@@ -119,7 +119,7 @@ ${formData.message}`;
                   <p className="text-[11px] font-semibold text-slate-400 dark:text-slate-500">
                     Phone
                   </p>
-                  <p className="text-sm font-bold text-slate-800 dark:text-slate-200 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
+                  <p className="text-sm font-bold text-slate-800 dark:text-slate-200 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
                     {personalInfo.phone}
                   </p>
                 </div>
@@ -149,7 +149,7 @@ ${formData.message}`;
               )}
 
               {/* Location */}
-              <div className="flex items-center gap-3 p-3 rounded-xl bg-white/70 dark:bg-slate-900/70 border border-rose-100 dark:border-slate-800">
+              <div className="flex items-center gap-3 p-3 rounded-xl bg-white/70 dark:bg-slate-900/70 border border-amber-100 dark:border-slate-800">
                 <div className="w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-950/80 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
                   <MapPin className="w-4.5 h-4.5" />
                 </div>
@@ -166,13 +166,13 @@ ${formData.message}`;
             </div>
 
             {/* Social Links */}
-            <div className="mt-5 pt-5 border-t border-rose-100 dark:border-slate-800">
+            <div className="mt-5 pt-5 border-t border-amber-100 dark:border-slate-800">
               <div className="flex flex-wrap gap-2">
                 <a
                   href={personalInfo.socialLinks.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-rose-100 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-rose-50 dark:hover:bg-slate-800 transition-all"
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-amber-100 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-amber-50 dark:hover:bg-slate-800 transition-all"
                 >
                   <LinkedinIcon className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                   LinkedIn
@@ -182,7 +182,7 @@ ${formData.message}`;
                   href={personalInfo.socialLinks.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-rose-100 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-rose-50 dark:hover:bg-slate-800 transition-all"
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-amber-100 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-amber-50 dark:hover:bg-slate-800 transition-all"
                 >
                   <GithubIcon className="w-4 h-4 text-slate-900 dark:text-slate-100" />
                   GitHub
@@ -193,7 +193,7 @@ ${formData.message}`;
                     href={personalInfo.socialLinks.youtube}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-rose-100 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 hover:text-red-600 dark:hover:text-red-400 hover:bg-rose-50 dark:hover:bg-slate-800 transition-all"
+                    className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-amber-100 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 hover:text-red-600 dark:hover:text-red-400 hover:bg-amber-50 dark:hover:bg-slate-800 transition-all"
                   >
                     <YouTubeIcon className="w-4 h-4 text-red-600" />
                     YouTube
@@ -245,7 +245,7 @@ ${formData.message}`;
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your name"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-white/90 dark:bg-slate-900/90 border border-rose-100 dark:border-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent transition-all"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-white/90 dark:bg-slate-900/90 border border-amber-100 dark:border-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all"
                   />
                 </div>
 
@@ -265,7 +265,7 @@ ${formData.message}`;
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="you@example.com"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-white/90 dark:bg-slate-900/90 border border-rose-100 dark:border-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent transition-all"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-white/90 dark:bg-slate-900/90 border border-amber-100 dark:border-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all"
                   />
                 </div>
               </div>
@@ -285,7 +285,7 @@ ${formData.message}`;
                   value={formData.subject}
                   onChange={handleChange}
                   placeholder="Job opportunity / AI project collaboration"
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-white/90 dark:bg-slate-900/90 border border-rose-100 dark:border-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent transition-all"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-white/90 dark:bg-slate-900/90 border border-amber-100 dark:border-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all"
                 />
               </div>
 
@@ -305,13 +305,13 @@ ${formData.message}`;
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Write your message..."
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-white/90 dark:bg-slate-900/90 border border-rose-100 dark:border-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent transition-all resize-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-white/90 dark:bg-slate-900/90 border border-amber-100 dark:border-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all resize-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-gradient-to-r from-rose-500 via-rose-600 to-purple-600 text-white font-bold text-sm shadow-md shadow-rose-500/20 hover:shadow-lg hover:shadow-rose-500/30 hover:scale-[1.01] active:scale-[0.99] transition-all"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-500 text-white font-bold text-sm shadow-md shadow-amber-500/25 hover:shadow-lg hover:shadow-amber-500/35 hover:scale-[1.01] active:scale-[0.99] transition-all"
               >
                 <Send className="w-4 h-4" />
                 Send Message

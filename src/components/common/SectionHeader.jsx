@@ -11,8 +11,8 @@ const SectionHeader = ({ tag, title, subtitle, centered = true }) => {
       className={`mb-12 md:mb-16 ${centered ? 'text-center max-w-3xl mx-auto' : ''}`}
     >
       {tag && (
-        <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase gradient-badge text-rose-700 dark:text-rose-300 shadow-xs mb-3">
-          <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+        <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase gradient-badge text-amber-800 dark:text-amber-300 shadow-xs mb-3">
+          <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
           {tag}
         </span>
       )}
@@ -24,7 +24,7 @@ const SectionHeader = ({ tag, title, subtitle, centered = true }) => {
           {subtitle}
         </p>
       )}
-      <div className={`mt-4 h-1 w-16 bg-gradient-to-r from-rose-400 via-purple-400 to-indigo-400 rounded-full ${centered ? 'mx-auto' : ''}`} />
+      <div className={`mt-4 h-1 w-16 bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-400 rounded-full ${centered ? 'mx-auto' : ''}`} />
     </motion.div>
   );
 };

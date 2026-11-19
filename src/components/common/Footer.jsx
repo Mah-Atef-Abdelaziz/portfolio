@@ -15,7 +15,7 @@ const Footer = () => {
     <footer className="relative overflow-hidden border-t border-slate-200 bg-white text-slate-600 transition-colors duration-300 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">
 
       {/* Subtle Background Glow */}
-      <div className="pointer-events-none absolute -bottom-20 left-1/2 h-40 w-96 -translate-x-1/2 rounded-full bg-rose-500/5 blur-3xl dark:bg-rose-500/10" />
+      <div className="pointer-events-none absolute -bottom-20 left-1/2 h-40 w-96 -translate-x-1/2 rounded-full bg-amber-500/5 blur-3xl dark:bg-amber-500/10" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
 
@@ -27,7 +27,7 @@ const Footer = () => {
 
             <div className="mb-3 flex items-center justify-center gap-2.5 sm:justify-start">
 
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-rose-500 to-purple-600 text-white shadow-sm">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 via-yellow-500 to-orange-500 text-white shadow-sm">
                 <Code2 className="h-5 w-5" />
               </div>
 
@@ -52,7 +52,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-600 transition-all duration-200 hover:-translate-y-0.5 hover:border-rose-500 hover:bg-rose-500 hover:text-white dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-600 transition-all duration-200 hover:-translate-y-0.5 hover:border-amber-500 hover:bg-amber-500 hover:text-white dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
             >
               <GithubIcon className="h-5 w-5" />
             </a>
@@ -63,7 +63,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-600 transition-all duration-200 hover:-translate-y-0.5 hover:border-rose-500 hover:bg-rose-500 hover:text-white dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-600 transition-all duration-200 hover:-translate-y-0.5 hover:border-amber-500 hover:bg-amber-500 hover:text-white dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
             >
               <LinkedinIcon className="h-5 w-5" />
             </a>
@@ -98,7 +98,7 @@ const Footer = () => {
             <a
               href={personalInfo.socialLinks.email}
               aria-label="Email"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-600 transition-all duration-200 hover:-translate-y-0.5 hover:border-rose-500 hover:bg-rose-500 hover:text-white dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-600 transition-all duration-200 hover:-translate-y-0.5 hover:border-amber-500 hover:bg-amber-500 hover:text-white dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
             >
               <Mail className="h-5 w-5" />
             </a>
@@ -107,7 +107,7 @@ const Footer = () => {
             <button
               onClick={scrollToTop}
               aria-label="Back to top"
-              className="ml-1 flex h-10 w-10 items-center justify-center rounded-full bg-rose-500 text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-rose-600"
+              className="ml-1 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-orange-500 text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:shadow-amber-500/30"
             >
               <ArrowUp className="h-5 w-5" />
             </button>

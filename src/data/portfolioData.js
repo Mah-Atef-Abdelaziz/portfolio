@@ -34,7 +34,7 @@ export const personalInfo = {
     email: "mailto:mah.atef.abdelaziz@gmail.com",
   },
 
-  cvUrl: "/assets/resume_mahmoud_atef.pdf",
+  cvUrl: "./assets/resume_mahmoud_atef.pdf",
 };
 
 

@@ -24,16 +24,16 @@ const ExperienceSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: idx * 0.08 }}
               whileHover={{ y: -3, transition: { duration: 0.2 } }}
-              className="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between border border-rose-100/80 dark:border-slate-800/80 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm hover:shadow-md hover:border-rose-200 dark:hover:border-slate-700 transition-all duration-200"
+              className="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between border border-amber-100/80 dark:border-slate-800/80 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm hover:shadow-md hover:border-amber-200 dark:hover:border-slate-700 transition-all duration-200"
             >
               <div>
                 {/* Type Badge & Date Header */}
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                  <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-rose-100/80 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 border border-rose-200/60 dark:border-rose-900/50">
+                  <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-100/80 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 border border-amber-200/60 dark:border-amber-900/50">
                     {item.type}
                   </span>
                   <span className="inline-flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 font-medium">
-                    <Calendar className="w-3.5 h-3.5 text-rose-500 dark:text-rose-400 shrink-0" />
+                    <Calendar className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400 shrink-0" />
                     {item.period}
                   </span>
                 </div>
@@ -44,9 +44,9 @@ const ExperienceSection = () => {
                 </h3>
 
                 {/* Organization & Location */}
-                <div className="flex flex-wrap items-center gap-2 text-xs font-medium text-rose-600 dark:text-rose-400 mb-4">
-                  <span className="inline-flex items-center gap-1 font-semibold text-rose-700 dark:text-rose-300">
-                    <Building2 className="w-3.5 h-3.5 text-rose-500 dark:text-rose-400 shrink-0" />
+                <div className="flex flex-wrap items-center gap-2 text-xs font-medium text-amber-600 dark:text-amber-400 mb-4">
+                  <span className="inline-flex items-center gap-1 font-semibold text-amber-700 dark:text-amber-300">
+                    <Building2 className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400 shrink-0" />
                     {item.organization}
                   </span>
                   <span className="text-slate-300 dark:text-slate-700 font-normal">•</span>
@@ -63,7 +63,7 @@ const ExperienceSection = () => {
                       key={hIdx}
                       className="flex items-start gap-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-normal"
                     >
-                      <CheckCircle2 className="w-3.5 h-3.5 text-rose-500 dark:text-rose-400 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400 shrink-0 mt-0.5" />
                       <span>{highlight}</span>
                     </li>
                   ))}

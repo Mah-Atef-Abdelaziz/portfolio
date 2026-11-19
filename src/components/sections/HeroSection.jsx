@@ -50,10 +50,10 @@ const HeroSection = () => {
       id="home"
       className="min-h-screen pt-28 pb-16 md:pt-36 md:pb-24 flex items-center relative overflow-hidden"
     >
-      {/* Decorative Ambient Background Blobs */}
-      <div className="absolute top-1/4 left-5 w-72 h-72 sm:w-96 sm:h-96 bg-rose-200/50 dark:bg-rose-900/20 rounded-full blur-3xl -z-10 pointer-events-none animate-pulse duration-10000"></div>
-      <div className="absolute bottom-12 right-8 w-80 h-80 sm:w-[28rem] sm:h-[28rem] bg-purple-200/50 dark:bg-purple-900/20 rounded-full blur-3xl -z-10 pointer-events-none"></div>
-      <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-indigo-100/40 dark:bg-indigo-950/20 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+      {/* Decorative Ambient Background Blobs — Gold palette */}
+      <div className="absolute top-1/4 left-5 w-72 h-72 sm:w-96 sm:h-96 bg-amber-200/50 dark:bg-amber-900/15 rounded-full blur-3xl -z-10 pointer-events-none animate-pulse duration-10000"></div>
+      <div className="absolute bottom-12 right-8 w-80 h-80 sm:w-[28rem] sm:h-[28rem] bg-yellow-200/40 dark:bg-yellow-900/15 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-orange-100/40 dark:bg-orange-950/15 rounded-full blur-3xl -z-10 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -66,13 +66,13 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: -15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full gradient-badge text-rose-700 dark:text-rose-300 text-xs sm:text-sm font-semibold mb-6 shadow-xs border border-rose-200/80 dark:border-rose-900/40"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full gradient-badge text-amber-800 dark:text-amber-300 text-xs sm:text-sm font-semibold mb-6 shadow-xs border border-amber-200/80 dark:border-amber-900/40"
             >
               <Sparkles
-                className="w-4 h-4 text-rose-500 dark:text-rose-400 animate-spin"
+                className="w-4 h-4 text-amber-500 dark:text-amber-400 animate-spin"
                 style={{ animationDuration: '6s' }}
               />
-              <span>Available for AI, Cloud & Software Engineering Roles</span>
+              <span>Available for AI, Cloud &amp; Software Engineering Roles</span>
             </motion.div>
 
             {/* Greeting & Animated Dynamic Name */}
@@ -100,12 +100,12 @@ const HeroSection = () => {
               transition={{ duration: 0.5, delay: 0.45 }}
               className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-700 dark:text-slate-200 mb-6 flex items-center min-h-[44px]"
             >
-              <span className="w-7 sm:w-9 h-1 bg-rose-500 dark:bg-rose-400 rounded-full mr-3 shrink-0"></span>
+              <span className="w-7 sm:w-9 h-1 bg-amber-500 dark:bg-amber-400 rounded-full mr-3 shrink-0"></span>
               <span className="tracking-tight text-slate-800 dark:text-slate-100 font-extrabold">
                 {currentText}
               </span>
               <span
-                className="inline-block w-0.5 h-7 sm:h-8 bg-rose-500 dark:bg-rose-400 ml-1.5 animate-pulse align-middle"
+                className="inline-block w-0.5 h-7 sm:h-8 bg-amber-500 dark:bg-amber-400 ml-1.5 animate-pulse align-middle"
                 aria-hidden="true"
               />
             </motion.div>
@@ -130,26 +130,26 @@ const HeroSection = () => {
               {/* View My Work */}
               <a
                 href="#projects"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-slate-900 dark:bg-rose-600 text-white font-semibold text-sm hover:bg-slate-800 dark:hover:bg-rose-500 transition-all shadow-md hover:shadow-xl hover:-translate-y-1 active:translate-y-0"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-slate-900 dark:bg-amber-600 text-white font-semibold text-sm hover:bg-amber-600 dark:hover:bg-amber-500 transition-all shadow-md hover:shadow-xl hover:-translate-y-1 active:translate-y-0"
               >
                 View My Projects
-                <ArrowRight className="w-4 h-4 text-rose-300 dark:text-rose-100" />
+                <ArrowRight className="w-4 h-4 text-amber-300 dark:text-amber-100" />
               </a>
 
               {/* Download CV */}
               <a
                 href={personalInfo.cvUrl}
                 download="resume_mahmoud_atef.pdf"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 font-semibold text-sm border border-rose-200 dark:border-slate-800 hover:bg-rose-50/80 dark:hover:bg-slate-800 hover:border-rose-300 transition-all shadow-xs hover:shadow-md hover:-translate-y-1"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 font-semibold text-sm border border-amber-200 dark:border-slate-800 hover:bg-amber-50/80 dark:hover:bg-slate-800 hover:border-amber-300 transition-all shadow-xs hover:shadow-md hover:-translate-y-1"
               >
-                <Download className="w-4 h-4 text-rose-500 dark:text-rose-400" />
+                <Download className="w-4 h-4 text-amber-500 dark:text-amber-400" />
                 Download CV
               </a>
 
               {/* Contact Me */}
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-rose-100/70 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300 font-semibold text-sm hover:bg-rose-200/80 dark:hover:bg-rose-900/60 hover:-translate-y-1 transition-all"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-amber-100/70 dark:bg-amber-950/50 text-amber-800 dark:text-amber-300 font-semibold text-sm hover:bg-amber-200/80 dark:hover:bg-amber-900/60 hover:-translate-y-1 transition-all"
               >
                 Get In Touch
               </a>
@@ -160,7 +160,7 @@ const HeroSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.9 }}
-              className="flex items-center gap-4 pt-4 border-t border-rose-100/80 dark:border-slate-800 w-full"
+              className="flex items-center gap-4 pt-4 border-t border-amber-100/80 dark:border-slate-800 w-full"
             >
               <span className="text-xs uppercase tracking-wider font-semibold text-slate-400 dark:text-slate-500">
                 Connect with me:
@@ -171,7 +171,7 @@ const HeroSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub Profile"
-                  className="w-10 h-10 rounded-full bg-white dark:bg-slate-900 border border-rose-100 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-rose-600 dark:hover:text-rose-400 hover:border-rose-300 dark:hover:border-rose-800 hover:bg-rose-50 dark:hover:bg-slate-800 hover:-translate-y-0.5 transition-all shadow-xs"
+                  className="w-10 h-10 rounded-full bg-white dark:bg-slate-900 border border-amber-100 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-amber-600 dark:hover:text-amber-400 hover:border-amber-300 dark:hover:border-amber-800 hover:bg-amber-50 dark:hover:bg-slate-800 hover:-translate-y-0.5 transition-all shadow-xs"
                 >
                   <GithubIcon className="w-5 h-5" />
                 </a>
@@ -180,7 +180,7 @@ const HeroSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn Profile"
-                  className="w-10 h-10 rounded-full bg-white dark:bg-slate-900 border border-rose-100 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-rose-600 dark:hover:text-rose-400 hover:border-rose-300 dark:hover:border-rose-800 hover:bg-rose-50 dark:hover:bg-slate-800 hover:-translate-y-0.5 transition-all shadow-xs"
+                  className="w-10 h-10 rounded-full bg-white dark:bg-slate-900 border border-amber-100 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-amber-600 dark:hover:text-amber-400 hover:border-amber-300 dark:hover:border-amber-800 hover:bg-amber-50 dark:hover:bg-slate-800 hover:-translate-y-0.5 transition-all shadow-xs"
                 >
                   <LinkedinIcon className="w-5 h-5" />
                 </a>
@@ -209,7 +209,7 @@ const HeroSection = () => {
                 <a
                   href={personalInfo.socialLinks.email}
                   aria-label="Send Email"
-                  className="w-10 h-10 rounded-full bg-white dark:bg-slate-900 border border-rose-100 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-rose-600 dark:hover:text-rose-400 hover:border-rose-300 dark:hover:border-rose-800 hover:bg-rose-50 dark:hover:bg-slate-800 hover:-translate-y-0.5 transition-all shadow-xs"
+                  className="w-10 h-10 rounded-full bg-white dark:bg-slate-900 border border-amber-100 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-amber-600 dark:hover:text-amber-400 hover:border-amber-300 dark:hover:border-amber-800 hover:bg-amber-50 dark:hover:bg-slate-800 hover:-translate-y-0.5 transition-all shadow-xs"
                 >
                   <Mail className="w-5 h-5" />
                 </a>
@@ -234,18 +234,18 @@ const HeroSection = () => {
               }}
               className="relative w-72 h-72 sm:w-88 sm:h-88 md:w-[25rem] md:h-[25rem] lg:w-[27rem] lg:h-[27rem]"
             >
-              {/* Rotating Decorative Dashed Accent Ring */}
+              {/* Rotating Decorative Dashed Accent Ring — Gold */}
               <div
-                className="absolute -inset-4 rounded-[2.5rem] border-2 border-dashed border-rose-300/60 dark:border-rose-700/40 pointer-events-none animate-spin"
+                className="absolute -inset-4 rounded-[2.5rem] border-2 border-dashed border-amber-400/60 dark:border-amber-700/40 pointer-events-none animate-spin"
                 style={{ animationDuration: '30s' }}
               />
 
-              {/* Ambient Soft Glow Backdrop */}
-              <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-tr from-rose-400/40 via-purple-400/30 to-indigo-500/30 blur-2xl opacity-70 dark:opacity-40 pointer-events-none"></div>
+              {/* Ambient Soft Glow Backdrop — Gold */}
+              <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-tr from-amber-400/40 via-yellow-300/30 to-orange-400/30 blur-2xl opacity-70 dark:opacity-40 pointer-events-none"></div>
 
               {/* Image Frame Container */}
-              <div className="relative w-full h-full rounded-[2.2rem] p-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-rose-200/80 dark:border-slate-800 shadow-2xl overflow-hidden group">
-                <div className="relative w-full h-full rounded-[1.7rem] overflow-hidden bg-gradient-to-tr from-rose-100 to-purple-100 dark:from-slate-800 dark:to-slate-900">
+              <div className="relative w-full h-full rounded-[2.2rem] p-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-amber-200/80 dark:border-slate-800 shadow-2xl overflow-hidden group">
+                <div className="relative w-full h-full rounded-[1.7rem] overflow-hidden bg-gradient-to-tr from-amber-100 to-yellow-100 dark:from-slate-800 dark:to-slate-900">
                   <img
                     src={profilePhoto}
                     alt={personalInfo.displayName || personalInfo.name}
