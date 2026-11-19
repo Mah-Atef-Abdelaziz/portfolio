@@ -1,21 +1,37 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Play, Pause, Volume2, VolumeX, Maximize2, Presentation } from 'lucide-react';
 import SectionHeader from '../common/SectionHeader';
 
 const PortfolioVideoSection = () => {
   const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [isMuted, setIsMuted] = useState(true);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => setIsPlaying(true))
+          .catch(() => {
+            // Browser autoplay restrictions fallback
+            setIsPlaying(false);
+          });
+      }
+    }
+  }, []);
 
   const togglePlay = () => {
     if (!videoRef.current) return;
     if (isPlaying) {
       videoRef.current.pause();
+      setIsPlaying(false);
     } else {
-      videoRef.current.play();
+      videoRef.current.play().then(() => setIsPlaying(true)).catch(() => {});
     }
-    setIsPlaying(!isPlaying);
   };
 
   const toggleMute = () => {
@@ -50,15 +66,18 @@ const PortfolioVideoSection = () => {
           transition={{ duration: 0.6 }}
           className="relative rounded-3xl overflow-hidden shadow-2xl border border-amber-200/40 dark:border-amber-800/30 bg-black group"
         >
-          {/* Video Element */}
+          {/* Video Element with AutoPlay, Loop, Muted, PlaysInline */}
           <video
             ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
             className="w-full aspect-video object-cover"
             onEnded={() => setIsPlaying(false)}
             onPause={() => setIsPlaying(false)}
             onPlay={() => setIsPlaying(true)}
-            poster=""
-            preload="metadata"
+            preload="auto"
           >
             <source src={`${import.meta.env.BASE_URL}assets/portfolio_video.mp4`} type="video/mp4" />
             Your browser does not support the video tag.
@@ -67,14 +86,25 @@ const PortfolioVideoSection = () => {
           {/* Gradient overlay at bottom for controls */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10 pointer-events-none" />
 
-          {/* Center Play Button (shown when paused) */}
+          {/* Unmute quick badge when muted */}
+          {isMuted && isPlaying && (
+            <button
+              onClick={toggleMute}
+              className="absolute top-4 right-4 z-20 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-amber-300 border border-amber-400/30 text-xs font-semibold hover:bg-black/80 hover:text-white transition-all shadow-lg cursor-pointer"
+            >
+              <VolumeX className="w-3.5 h-3.5" />
+              <span>Tap for sound</span>
+            </button>
+          )}
+
+          {/* Center Play Button (only shown when paused) */}
           {!isPlaying && (
             <motion.button
               initial={{ opacity: 0, scale: 0.85 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.85 }}
               onClick={togglePlay}
-              className="absolute inset-0 flex items-center justify-center cursor-pointer"
+              className="absolute inset-0 flex items-center justify-center cursor-pointer z-10"
               aria-label="Play video"
             >
               <div className="w-20 h-20 rounded-full bg-amber-500/90 backdrop-blur-sm flex items-center justify-center shadow-2xl shadow-amber-500/50 hover:scale-110 transition-transform duration-200">
@@ -84,12 +114,12 @@ const PortfolioVideoSection = () => {
           )}
 
           {/* Bottom Controls Bar */}
-          <div className="absolute bottom-0 left-0 right-0 px-5 py-4 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="absolute bottom-0 left-0 right-0 px-5 py-4 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
             <div className="flex items-center gap-3">
               {/* Play / Pause */}
               <button
                 onClick={togglePlay}
-                className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-amber-500 transition-colors text-white"
+                className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-amber-500 transition-colors text-white cursor-pointer"
                 aria-label={isPlaying ? 'Pause' : 'Play'}
               >
                 {isPlaying ? (
@@ -102,7 +132,7 @@ const PortfolioVideoSection = () => {
               {/* Mute / Unmute */}
               <button
                 onClick={toggleMute}
-                className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-amber-500 transition-colors text-white"
+                className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-amber-500 transition-colors text-white cursor-pointer"
                 aria-label={isMuted ? 'Unmute' : 'Mute'}
               >
                 {isMuted ? (
@@ -116,7 +146,7 @@ const PortfolioVideoSection = () => {
             {/* Fullscreen */}
             <button
               onClick={toggleFullscreen}
-              className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-amber-500 transition-colors text-white"
+              className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-amber-500 transition-colors text-white cursor-pointer"
               aria-label="Fullscreen"
             >
               <Maximize2 className="w-4 h-4" />
