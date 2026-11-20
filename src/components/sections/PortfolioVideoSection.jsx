@@ -5,23 +5,43 @@ import SectionHeader from '../common/SectionHeader';
 
 const PortfolioVideoSection = () => {
   const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.defaultMuted = true;
-      videoRef.current.muted = true;
-      const playPromise = videoRef.current.play();
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => setIsPlaying(true))
-          .catch(() => {
-            // Browser autoplay restrictions fallback
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.defaultMuted = true;
+    video.muted = true;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.35) {
+            video
+              .play()
+              .then(() => setIsPlaying(true))
+              .catch(() => {
+                // In case autoplay is restricted before user gesture
+                setIsPlaying(false);
+              });
+          } else if (!entry.isIntersecting || entry.intersectionRatio < 0.2) {
+            video.pause();
             setIsPlaying(false);
-          });
+          }
+        });
+      },
+      {
+        threshold: [0, 0.2, 0.35],
       }
-    }
+    );
+
+    observer.observe(video);
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   const togglePlay = () => {
@@ -66,10 +86,9 @@ const PortfolioVideoSection = () => {
           transition={{ duration: 0.6 }}
           className="relative rounded-3xl overflow-hidden shadow-2xl border border-amber-200/40 dark:border-amber-800/30 bg-black group"
         >
-          {/* Video Element with AutoPlay, Loop, Muted, PlaysInline */}
+          {/* Video Element with Viewport AutoPlay on Scroll, Loop, Muted, PlaysInline */}
           <video
             ref={videoRef}
-            autoPlay
             loop
             muted
             playsInline
@@ -77,7 +96,7 @@ const PortfolioVideoSection = () => {
             onEnded={() => setIsPlaying(false)}
             onPause={() => setIsPlaying(false)}
             onPlay={() => setIsPlaying(true)}
-            preload="auto"
+            preload="metadata"
           >
             <source src={`${import.meta.env.BASE_URL}assets/portfolio_video.mp4`} type="video/mp4" />
             Your browser does not support the video tag.
