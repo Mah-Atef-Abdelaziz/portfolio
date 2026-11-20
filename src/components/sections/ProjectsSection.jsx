@@ -87,7 +87,11 @@ const ProjectsSection = () => {
                 {/* Compact Image Header */}
                 <div className="relative aspect-video w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
                   <img
-                    src={project.image}
+                    src={
+                      project.image.startsWith('http')
+                        ? project.image
+                        : `${import.meta.env.BASE_URL}${project.image.replace(/^\.?\//, '')}`
+                    }
                     alt={`${project.title} preview`}
                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     onError={(e) => {

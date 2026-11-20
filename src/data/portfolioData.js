@@ -28,7 +28,7 @@ export const personalInfo = {
 
   socialLinks: {
     github: "https://github.com/Mah-Atef-Abdelaziz",
-    linkedin: "https://www.linkedin.com/in/m-atef003/",
+    linkedin: "https://www.linkedin.com/in/mah-atef/",
     youtube: "https://www.youtube.com/@mah.atef.abdelaziz",
     whatsapp: "https://wa.me/201014241013",
     email: "mailto:mah.atef.abdelaziz@gmail.com",
@@ -394,7 +394,7 @@ export const projectsData = [
       "REST APIs",
     ],
 
-    image: "/assets/projects/sakanly-preview.jpg",
+    image: "/assets/projects/sakanly-preview.png",
 
     githubUrl:
       "https://github.com/Mah-Atef-Abdelaziz?tab=repositories&q=Sakanly",
@@ -431,7 +431,7 @@ export const projectsData = [
       "Bootstrap",
     ],
 
-    image: "/assets/projects/queen-royal-preview.jpg",
+    image: "/assets/projects/booktea-preview.png",
 
     githubUrl:
       "https://github.com/Mah-Atef-Abdelaziz?tab=repositories&q=BookTea",
@@ -706,7 +706,7 @@ export const certificatesData = [
       "Qualified as a national finalist representing Egypt at the Africa and Arab Collegiate Programming Championship, solving high-level algorithmic problems under rigorous contest conditions.",
 
     credentialUrl:
-      "https://www.linkedin.com/in/m-atef003/",
+      "https://www.linkedin.com/in/mah-atef/",
   },
 
   {
@@ -720,7 +720,7 @@ export const certificatesData = [
       "Advanced to the finals of the Egyptian Collegiate Programming Contest, competing among Egypt's top university problem solvers in advanced data structures and algorithms.",
 
     credentialUrl:
-      "https://www.linkedin.com/in/m-atef003/",
+      "https://www.linkedin.com/in/mah-atef/",
   },
 
   {
